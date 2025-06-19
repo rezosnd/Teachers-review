@@ -7,6 +7,7 @@ import { Toaster } from "@/components/ui/toaster"
 import { Footer } from "@/components/footer"
 import { CookieConsent } from "@/components/cookie-consent"
 import CustomCursor from "@/components/custom-cursor"
+import Navbar from "@/components/navbar"
 
 const inter = Inter({ subsets: ["latin"] })
 
