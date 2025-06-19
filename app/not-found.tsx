@@ -4,11 +4,11 @@ import Link from "next/link"
 import { motion } from "framer-motion"
 import { Home, AlertTriangle } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import Navbar from "@/components/navbar";
 
 export default function NotFound() {
   return (
     <div className="min-h-[70vh] flex items-center justify-center px-4">
-      {/* Decorative background elements */}
       <div className="bg"></div>
       <div className="hud__effects">
         <div className="effect__long"></div>
@@ -18,11 +18,9 @@ export default function NotFound() {
       </div>
 
       <div className="text-center max-w-md relative">
-        {/* Blurred background circles */}
         <div className="absolute -top-20 -right-20 w-40 h-40 bg-primary/10 rounded-full blur-3xl"></div>
         <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-primary/10 rounded-full blur-3xl"></div>
 
-        {/* Animated 404 */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -47,7 +45,6 @@ export default function NotFound() {
           ></motion.div>
         </motion.div>
 
-        {/* Message and icon */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -59,12 +56,9 @@ export default function NotFound() {
           </div>
           <h2 className="text-3xl font-semibold text-primary sci-fi-text-glow">Page Not Found</h2>
           <div className="sci-fi-divider my-4"></div>
-          <p className="text-gray-300 mb-8">
-            Oops! The page you're looking for doesn't exist or has been moved.
-          </p>
+          <p className="text-gray-300 mb-8">Oops! The page you're looking for doesn't exist or has been moved.</p>
         </motion.div>
 
-        {/* Back to Home button */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -79,7 +73,6 @@ export default function NotFound() {
           </Link>
         </motion.div>
 
-        {/* Divider bars */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
