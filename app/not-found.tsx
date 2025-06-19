@@ -4,7 +4,7 @@ import Link from "next/link"
 import { motion } from "framer-motion"
 import { Home, AlertTriangle } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import Navbar from "@/components/navbar"
+import { Navbar } from "@/components/navbar";
 
 export default function NotFound() {
   return (
