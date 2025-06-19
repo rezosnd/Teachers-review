@@ -5,7 +5,8 @@ import { useRouter } from "next/navigation"
 import { useToast } from "@/components/ui/use-toast"
 
 export function useAuth() {
-  const { data: session, status } = useSession()
+  // SAFELY destructure with fallback
+  const { data: session, status } = useSession() || {};
   const router = useRouter()
   const { toast } = useToast()
 
@@ -61,3 +62,4 @@ export function useAuth() {
     upgradeAccount,
   }
 }
+
