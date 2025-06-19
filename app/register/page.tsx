@@ -5,14 +5,21 @@ import type React from "react"
 import { useState } from "react"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
-import { useAuth } from "@/components/auth-provider"
+import { useAuth } from "@/components/auth-provider" // <-- must be a named export
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
 import { Alert, AlertDescription } from "@/components/ui/alert"
 import { useToast } from "@/components/ui/use-toast"
-import Navbar from "@/components/navbar"
+import Navbar from "@/components/navbar" // <-- must be a default export
 import { Eye, EyeOff, AlertCircle } from "lucide-react"
 
 export default function RegisterPage() {
@@ -198,3 +205,4 @@ export default function RegisterPage() {
     </div>
   )
 }
+
