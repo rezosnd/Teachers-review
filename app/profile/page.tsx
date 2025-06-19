@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-
 import { useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
 import { useSession } from "next-auth/react"
@@ -15,7 +14,8 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { User, Phone, Mail, RefreshCw } from "lucide-react"
 
 export default function ProfilePage() {
-  const { data: session, status, update } = useSession()
+  // SAFELY destructure with fallback
+  const { data: session, status = "unauthenticated", update } = useSession() || {};
   const router = useRouter()
   const { toast } = useToast()
 
@@ -53,7 +53,7 @@ export default function ProfilePage() {
       }
 
       // Update the session with the new phone number
-      await update({ phone })
+      await update?.({ phone })
 
       toast({
         title: "Profile Updated",
@@ -166,3 +166,4 @@ export default function ProfilePage() {
     </div>
   )
 }
+
